@@ -1,6 +1,6 @@
 import streamlit as st
 import sympy as sp
-from math import ceil, sqrt, floor
+import math 
 import pandas as pd
 
 # Unidades
@@ -70,7 +70,7 @@ vu = (qu2 + qu3) / 2 * (B / 2 - t1 / 2 - d) * L
 vu1 = 0.75 * 0.53 * sp.sqrt(fc) * L * d
 eq2 = sp.Eq(vu, vu1)
 d = sp.nsolve(eq2, d, 10)
-h = ceil((d  + rec) / 5) * 5
+h = math.ceil((d  + rec) / 5) * 5
 d = h - rec
 bo = 2 * (t1 + d) + 2 * (t2 + d)
 qu3 = quy.subs(x, B/2 + t1/2 + d)
@@ -99,7 +99,7 @@ separacion = []
 for area in areas:
     barras = As / area
     sep1 = B / barras
-    sep = floor((B / barras) / 5) * 5
+    sep = math.floor((B / barras) / 5) * 5
     separacion.append(sep)
     separacion_teo.append(round(sep1, 2))
 

@@ -10,7 +10,7 @@ Tn_m3 = 0.001  # kgf/cm³
 m = 100  # cm
 
 # Datos iniciales mediante la interfaz de Streamlit
-st.title("Cálculo de Cargas y Refuerzos")
+st.title("Fundacion aislada con carga excentrica")
 
 P_D = st.number_input("Carga Muerta (P_D) en Tn", min_value=0.0, value=180.0) * Tn
 P_L = st.number_input("Carga Viva (P_L) en Tn", min_value=0.0, value=65.0) * Tn
